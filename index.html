@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Python Weather App</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body style="background-image: url_for('static',filename = 'bg.jpg');">
+    <h1 style="margin-left: 75vh ;"> Weather Report </h1>
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/" method="POST" style="margin-left: 72vh;margin-top: 6vw; font-size: xx-large;">
+        City:
+        <input name="city" type="text" required />
+        <input type="submit" value="Submit" />
+    </form>
+
+    {% if description %}
+    <p><strong>Current Weather:</strong> {{ description }}</p>
+    <p><strong>Temperature:</strong> {{ temperature }}</p>
+    <p><strong>Feels Like:</strong> {{ feels_like }}</p>
+    <p><strong>Minimum Temperature:</strong> {{ min_temp }}</p>
+    <p><strong>Maximum Temperature:</strong> {{ max_temp }}</p>
+    <p><strong>Pressure:</strong> {{ pressure }}</p>
+    <p><strong>Humidity:</strong> {{ humidity }}</p>
+    {% endif %}
+</body>
+
+</html>
