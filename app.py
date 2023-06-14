@@ -5,6 +5,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__ ,template_folder='template')
 
+
 #api
 app_id = 'APY_KEY'
 url = '7118bdd38f8f7fd52ecf716e503df7f6'
